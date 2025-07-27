@@ -1,24 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import axios from "axios";
-import { ParametersFunctionMedicineStore, ReturnErrorServerData } from "../../../types/api/medicine/index.ts";
-
-async function medicineStore({ query }: ParametersFunctionMedicineStore) {
-  const queryMedicine = query?.product;
-
-  const response = await axios.post(
-    `http://localhost:9558/health/medicine/searchMedicine?store=araia&product=${queryMedicine}`,
-    {},
-    {
-      headers: {
-        Authorization:
-          "Bearer fBbxYvh5BvG2TCkm7OoWwPHx9bz4lQKoUpBFEzGv6PHtwcUKVUTss6XIDTDs8Xy2",
-      },
-    }
-  );
-
-  return response;
-}
+import { ReturnErrorServerData } from "@/types/api/medicine";
+import { medicineStore } from "@/functions/api";
 
 export default async function handler(
   req: NextApiRequest,
@@ -53,3 +36,4 @@ export default async function handler(
     },
   });
 }
+
