@@ -1,16 +1,31 @@
-import { ParametersFunctionMedicineStore } from "@/types/api/medicine";
+import { ParametersFunctionGetLoteMedicineStore, ParametersFunctionMedicineStore } from "@/types/api/medicine";
 import axios from "axios";
 
 async function medicineStore({ query }: ParametersFunctionMedicineStore) {
   const queryMedicine = query?.product;
 
   const response = await axios.post(
-    `http://localhost:9558/health/medicine/searchMedicine?store=araia&product=${queryMedicine}`,
+    `${process.env.NEXT_PUBLIC_BFF_URL}/save/searchMedicine?store=araia&product=${queryMedicine}`,
     {},
     {
       headers: {
         Authorization:
-          "Bearer fBbxYvh5BvG2TCkm7OoWwPHx9bz4lQKoUpBFEzGv6PHtwcUKVUTss6XIDTDs8Xy2",
+          `Bearer ${process.env.NEXT_PUBLIC_BFF_TOKEN}`,
+      },
+    }
+  );
+
+  return response;
+}
+
+async function getLoteMedicineStore({ lote }: ParametersFunctionGetLoteMedicineStore) {
+  const response = await axios.post(
+    `${process.env.NEXT_PUBLIC_BFF_URL}/get/searchLote?lote=${lote}`,
+    {},
+    {
+      headers: {
+        Authorization:
+          `Bearer ${process.env.NEXT_PUBLIC_BFF_TOKEN}`,
       },
     }
   );
@@ -20,4 +35,5 @@ async function medicineStore({ query }: ParametersFunctionMedicineStore) {
 
 export {
     medicineStore,
+    getLoteMedicineStore
 }

@@ -1,7 +1,10 @@
+import { useFormStatus } from "react-dom";
+import { useRouter } from "next/router";
+import Link from 'next/link'
+
 import { SearchMedicine } from "@/actions";
 import { ParametersHeaderComponent } from "@/types/components/header";
-import { useRouter } from "next/router";
-import { useFormStatus } from "react-dom";
+import BannerComponent from "../banner";
 
 export default function HeaderComponentV2({
   children,
@@ -66,8 +69,8 @@ export default function HeaderComponentV2({
           <div className="flex flex-col lg:flex-row items-center justify-center md:items-center md:justify-between">
             <div className="flex items-center space-x-8 m-5">
               <div className="shrink-0">
-                <a href="#" title="" className="flex">
-                  <img
+                <Link href={'/'} className="flex">
+                    <img
                     className="block w-auto h-8 mx-1"
                     src="/drug.svg"
                     alt=""
@@ -75,7 +78,7 @@ export default function HeaderComponentV2({
                   <span className="self-center text-xl font-semibold whitespace-nowrap text-black">
                     RemédioJá
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -115,6 +118,7 @@ export default function HeaderComponentV2({
             </div>
           </div>
         </div>
+        <BannerComponent />
         {children}
       </nav>
     </>

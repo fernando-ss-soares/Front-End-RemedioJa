@@ -18,6 +18,13 @@ async function SearchMedicine(formData: FormData) {
   return { status: status, lote: lote }
 }
 
-async function SearchLoteMedicine() {}
+async function SearchLoteMedicine({ lote }: { lote: string }) {
+
+  const { data, status } = await axios.get(
+    `/api/getlote?lote=${lote}` 
+  );
+
+  return { status: status, data: data }
+}
 
 export { SearchMedicine, SearchLoteMedicine };

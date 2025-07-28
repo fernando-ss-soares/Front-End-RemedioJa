@@ -14,7 +14,12 @@ type ObjectQuery = {
   product: string;
 };
 
+interface ParametersFunctionGetLoteMedicineStore {
+  lote: string;
+}
+
 export type {
     ReturnErrorServerData,
-    ParametersFunctionMedicineStore
+    ParametersFunctionMedicineStore,
+    ParametersFunctionGetLoteMedicineStore
 }
