@@ -10,7 +10,7 @@ async function medicineStore({ query }: ParametersFunctionMedicineStore) {
     {
       headers: {
         Authorization:
-          `Bearer ${process.env.NEXT_PUBLIC_BFF_TOKEN}`,
+          `Bearer fBbxYvh5BvG2TCkm7OoWwPHx9bz4lQKoUpBFEzGv6PHtwcUKVUTss6XIDTDs8Xy2`,
       },
     }
   );
@@ -25,7 +25,7 @@ async function getLoteMedicineStore({ lote }: ParametersFunctionGetLoteMedicineS
     {
       headers: {
         Authorization:
-          `Bearer ${process.env.NEXT_PUBLIC_BFF_TOKEN}`,
+          `Bearer fBbxYvh5BvG2TCkm7OoWwPHx9bz4lQKoUpBFEzGv6PHtwcUKVUTss6XIDTDs8Xy2`,
       },
     }
   );
