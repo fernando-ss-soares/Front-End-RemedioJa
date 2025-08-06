@@ -1,33 +1,20 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'RemédioJá',
-  description: 'O melhor site de acesso a médicamentos baratos do Brasil',
-  creator: "Fernando Soares",
-  keywords: ["Brasil", "Medicamentos", "RémedioJá", "Remédio barato"],
-  openGraph: {
-    title: 'RemédioJá',
-    description: 'O melhor site de acesso a médicamentos baratos do Brasil',
-    url: 'https://front-end-preco-medicamentos.vercel.app',
-    siteName: 'RemédioJá',
-    images: [
-      {
-        url: 'https://front-end-preco-medicamentos.vercel.app/drug.svg', // Deve ser uma URL absoluta
-        width: 1200,
-        height: 630,
-        alt: 'Imagem de destaque da Página Inicial',
-      },
-    ],
-    locale: 'pt_BR',
-    type: 'website',
-  },
-};
 
 export default function Document() {
   return (
     <Html lang="pt-br">
       <Head>
+        <meta property="twitter:image" content="https://front-end-preco-medicamentos.vercel.app/drug.svg"></meta>
+        <meta property="twitter:card" content="https://front-end-preco-medicamentos.vercel.app/drug.svg"></meta>
+        <meta property="twitter:title" content="RemédioJá"></meta>
+        <meta property="twitter:description" content="O aplicativo que te ajuda a economizar com os médicamentos"></meta>
+        <meta property="description" content="RemédioJá, Me" />
+        <meta property="og:image" content="https://front-end-preco-medicamentos.vercel.app/drug.svg"></meta>
+        <meta property="og:site_name" content="RemédioJá"></meta>
+        <meta property="og:title" content="RemédioJá"></meta>
+        <meta property="og:description" content="O aplicativo que te ajuda a economizar com os médicamentos" />
+        <meta property="og:url" content="https://front-end-preco-medicamentos.vercel.app/"></meta>
+        <title>RemédioJá</title>
         <link
           href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
           rel="stylesheet"
