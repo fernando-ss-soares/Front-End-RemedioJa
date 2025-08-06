@@ -1,40 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Front-End-RemedioJa
 
-## Getting Started
+Bem-vindo ao repositório **Front-End-RemedioJa**! Este projeto é a interface web para a plataforma RemedioJá, que visa facilitar a busca, comparação e aquisição de medicamentos de forma simples, rápida e segura.
 
-First, run the development server:
+## Sobre o Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+O RemedioJá é uma solução inovadora para quem deseja encontrar medicamentos de maneira eficiente, permitindo aos usuários:
+
+- Pesquisar medicamentos por nome
+- Comparar preços em diferentes farmácias
+- Verificar disponibilidade em tempo real
+
+Este repositório contém todo o código-fonte do front-end da aplicação, desenvolvido para oferecer uma experiência agradável e responsiva aos usuários.
+
+## Tecnologias Utilizadas
+
+- **React** — Biblioteca JavaScript para construção de interfaces de usuário
+- **JavaScript/TypeScript** — Lógica da aplicação
+- **HTML5 & CSS3** — Estrutura e estilização
+- **Axios ou Fetch API** — Consumo de APIs REST
+- **Bibliotecas de UI** — TailwindCSS
+- **Ferramentas de Gerenciamento de Estado** — Como Redux, Context API ou similares
+
+## Como Rodar o Projeto
+
+1. **Clone este repositório**
+   ```bash
+   git clone https://github.com/fernando-ss-soares/Front-End-RemedioJa.git
+   ```
+
+2. **Acesse a pasta do projeto**
+   ```bash
+   cd Front-End-RemedioJa
+   ```
+
+3. **Instale as dependências**
+   ```bash
+   npm install
+   ```
+
+4. **Inicie o servidor de desenvolvimento**
+   ```bash
+   npm start
+   ```
+
+5. **Acesse no navegador**
+   ```
+   http://localhost:3000
+   ```
+   (ou a porta apresentada no terminal)
+
+## Estrutura de Pastas
+
+```
+/
+ ├── actions/           # Server Actions
+ ├── components/        # Componentes reutilizáveis da UI
+ ├── functions/         # Funções de verificação API
+ ├── pages/             # Páginas principais do app
+ ├── public/            # Imagens, ícones, etc.
+ ├── styles/            # Estilos globais e temas
+ ├── types/             # Tipagem de dados
+ └── .env               # Variáveis de ambiente
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contribuição
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Contribuições são bem-vindas! Para contribuir:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature/fix (`git checkout -b minha-feature`)
+3. Faça commit das suas alterações (`git commit -m 'feat: minha nova feature'`)
+4. Faça push para sua branch (`git push origin minha-feature`)
+5. Abra um Pull Request
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Licença
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Este projeto está sob licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Feito com ❤️ por [fernando-ss-soares](https://github.com/fernando-ss-soares)
