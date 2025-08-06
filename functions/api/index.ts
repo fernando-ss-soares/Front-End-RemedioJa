@@ -2,9 +2,26 @@ import { ParametersFunctionGetLoteMedicineStore, ParametersFunctionMedicineStore
 import axios from "axios";
 
 async function medicineStore({ query }: ParametersFunctionMedicineStore) {
-  const queryMedicine = query?.product;
 
-  const response = await axios.post(
+const queryMedicine = query?.product;
+
+let config = {
+  method: 'post',
+  maxBodyLength: Infinity,
+  url: `https://api-preco-medicamentos.fernando-ss-soares.deno.net/labs/medicine/save/searchMedicine?store=araia&product=${queryMedicine}`,
+  headers: { 
+    'Content-Type': 'application/json', 
+    'Authorization': 'Bearer fBbxYvh5BvG2TCkm7OoWwPHx9bz4lQKoUpBFEzGv6PHtwcUKVUTss6XIDTDs8Xy2'
+  }
+};
+
+const response = await axios.request(config);
+
+return response;
+
+
+
+  /*const response = await axios.post(
     `https://api-preco-medicamentos.fernando-ss-soares.deno.net/health/medicine/save/searchMedicine?store=araia&product=${queryMedicine}`,
     {},
     {
@@ -15,7 +32,7 @@ async function medicineStore({ query }: ParametersFunctionMedicineStore) {
     }
   );
 
-  return response;
+  return response;*/
 }
 
 async function getLoteMedicineStore({ lote }: ParametersFunctionGetLoteMedicineStore) {
