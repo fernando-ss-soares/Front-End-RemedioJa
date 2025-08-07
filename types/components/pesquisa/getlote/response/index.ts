@@ -19,8 +19,6 @@ type LoteMedicine = {
   images: string[];
   link: string;
   date: string;
-}
+};
 
-export type {
-    ServerActionResponseGetLote
-}
+export type { ServerActionResponseGetLote };

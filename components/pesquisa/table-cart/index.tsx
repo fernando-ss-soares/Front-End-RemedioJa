@@ -35,12 +35,7 @@ export default function TableCartComponent({
                 </thead>
                 <tbody>
                   {server.message.loteMedicine.map(
-                    ({
-                      _id,
-                      link,
-                      title,
-                      value,
-                    }: Message) => (
+                    ({ _id, link, title, value }: Message) => (
                       <>
                         <tr key={_id} className="border-b">
                           <th

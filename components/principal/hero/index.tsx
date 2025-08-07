@@ -17,7 +17,13 @@ export default function HeroComponent() {
             </p>
           </div>
           <div className="lg:mt-0 lg:col-span-5 lg:flex">
-            <Image className="block w-full h-full mx-1" width={100} height={100} src="/medicine.svg" alt="mockup" />
+            <Image
+              className="block w-full h-full mx-1"
+              width={100}
+              height={100}
+              src="/medicine.svg"
+              alt="mockup"
+            />
           </div>
         </div>
       </article>

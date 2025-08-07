@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import CustomerLogoComponent from "@/components/principal/customer";
 import HeroComponent from "@/components/principal/hero";

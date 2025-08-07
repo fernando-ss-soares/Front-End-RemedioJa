@@ -26,7 +26,11 @@ export default function Pesquisa() {
 
     return (
       <>
-        {Medicine ? <CartComponent server={Medicine.server} /> : <LoadingPage title="Estamos pesquisando o seu medicamento... 💊" />}
+        {Medicine ? (
+          <CartComponent server={Medicine.server} />
+        ) : (
+          <LoadingPage title="Estamos pesquisando o seu medicamento... 💊" />
+        )}
         {Medicine ? <TableCartComponent server={Medicine.server} /> : null}
       </>
     );

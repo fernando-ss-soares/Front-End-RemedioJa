@@ -21,7 +21,4 @@ interface Message {
   date: string;
 }
 
-export type {
-    ReturnRequestDataMedicineStore,
-    Message
-}
+export type { ReturnRequestDataMedicineStore, Message };

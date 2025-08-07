@@ -19,7 +19,7 @@ interface ParametersFunctionGetLoteMedicineStore {
 }
 
 export type {
-    ReturnErrorServerData,
-    ParametersFunctionMedicineStore,
-    ParametersFunctionGetLoteMedicineStore
-}
+  ReturnErrorServerData,
+  ParametersFunctionMedicineStore,
+  ParametersFunctionGetLoteMedicineStore,
+};

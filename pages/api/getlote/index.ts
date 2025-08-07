@@ -13,7 +13,7 @@ export default async function handler(
 
   if (method == "GET") {
     const { data, status } = await getLoteMedicineStore({
-      lote: lote
+      lote: lote,
     });
 
     const response =

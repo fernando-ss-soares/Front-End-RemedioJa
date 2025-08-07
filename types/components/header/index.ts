@@ -4,6 +4,4 @@ type ParametersHeaderComponent = {
   children?: ReactNode;
 };
 
-export type {
-    ParametersHeaderComponent
-}
+export type { ParametersHeaderComponent };
