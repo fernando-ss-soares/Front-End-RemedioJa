@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 import { ReturnRequestDataMedicineStore } from "@/types/components/pesquisa";
@@ -8,6 +8,7 @@ import { ReturnRequestDataMedicineStore } from "@/types/components/pesquisa";
 import CartComponent from "@/components/pesquisa/cart";
 import TableCartComponent from "@/components/pesquisa/table-cart";
 import { ReceiveMedicineStore } from "@/functions/pesquisa";
+import LoadingPage from "@/components/geral/loading/page";
 
 export default function Pesquisa() {
   const [Medicine, setMedicine] = useState<ReturnRequestDataMedicineStore>();
@@ -20,12 +21,20 @@ export default function Pesquisa() {
     ReceiveMedicineStore({ lote, setMedicine });
   }, [lote]);
 
+  function ViewCart() {
+    "use client";
+
+    return (
+      <>
+        {Medicine ? <CartComponent server={Medicine.server} /> : <LoadingPage title="Estamos pesquisando o seu medicamento... 💊" />}
+        {Medicine ? <TableCartComponent server={Medicine.server} /> : null}
+      </>
+    );
+  }
+
   return (
     <>
-      <Suspense fallback={<div className="text-white">Carregando...</div>}>
-          {Medicine?.server && <CartComponent server={Medicine.server} />}
-          {Medicine?.server && <TableCartComponent server={Medicine.server} />}  
-      </Suspense>
+      <ViewCart />
     </>
   );
 }

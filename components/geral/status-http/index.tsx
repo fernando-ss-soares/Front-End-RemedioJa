@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface Props {
-  statusCode: number;
+  statusCode?: number | string;
   title: string;
   message: string;
 }

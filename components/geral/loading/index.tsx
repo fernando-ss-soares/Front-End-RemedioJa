@@ -1,9 +1,13 @@
-export default function Loading() {
+interface Props {
+  className?: string;
+}
+
+export default function Loading({ className = "w-16 h-5" }: Props) {
   return (
     <>
       <svg
         aria-hidden="true"
-        className="w-16 h-5 text-gray-200 animate-spin fill-violetCustom"
+        className={`text-gray-200 animate-spin fill-violetCustom ${className}`}
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
