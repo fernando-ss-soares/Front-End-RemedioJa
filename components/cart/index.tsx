@@ -1,4 +1,5 @@
 import { ReturnRequestDataMedicineStore } from "@/types/components/pesquisa";
+import Image from "next/image";
 
 export default function CartComponent({ Medicine }: { Medicine: ReturnRequestDataMedicineStore | any }) {
     return (
@@ -9,20 +10,22 @@ export default function CartComponent({ Medicine }: { Medicine: ReturnRequestDat
             <div className="shrink-0 max-w-md lg:max-w-lg mx-auto">
               <div className="grid gap-4">
                 <div>
-                  <img
+                  <Image
                     className="h-auto max-w-full rounded-lg"
                     src={Medicine?.server.message[0].images[0]}
                     alt=""
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="grid grid-cols-5 gap-4">
                   {Medicine?.server.message[0].images.map((data: string | Blob | undefined, index: any) => (
                     <div key={`${data}_${index}`}>
-                      <img
-                        className="h-auto max-w-full rounded-lg"
-                        src={data}
-                        alt=""
-                      />
+                      <Image className="h-auto max-w-full rounded-lg"
+                        src={data as string}
+                        width={100}
+                        height={100}
+                        alt="" />
                     </div>
                   ))}
                 </div>

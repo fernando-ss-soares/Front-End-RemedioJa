@@ -30,7 +30,7 @@ export default function TableCartComponent({ Medicine }: { Medicine: ReturnReque
                   </tr>
                 </thead>
                 <tbody>
-                  {Medicine?.server.message.map((data: { _id: Key | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; value: string | undefined | null; link: string | undefined; }, index: any) => (
+                  {Medicine?.server.message.map((data: { _id: Key | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined; value: string | undefined | null; link: string | undefined; }) => (
                     <>
                       <tr key={data._id} className="border-b">
                         <th

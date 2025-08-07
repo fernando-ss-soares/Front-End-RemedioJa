@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function HeroComponent() {
   return (
     <>
-      <section>
+      <article>
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
@@ -15,10 +17,10 @@ export default function HeroComponent() {
             </p>
           </div>
           <div className="lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="/medicine.svg" alt="mockup" />
+            <Image className="block w-full h-full mx-1" width={100} height={100} src="/medicine.svg" alt="mockup" />
           </div>
         </div>
-      </section>
+      </article>
     </>
   );
 }

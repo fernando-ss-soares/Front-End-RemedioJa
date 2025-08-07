@@ -6,10 +6,10 @@ import HeroComponent from "@/components/hero";
 export default function Home() {
   return (
     <>
-      <div className="bg-backgroundSecondCustom">
+      <section className="bg-backgroundSecondCustom">
         <HeroComponent />
         <CustomerLogoComponent />
-      </div>
+      </section>
     </>
   );
 }

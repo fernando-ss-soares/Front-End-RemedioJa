@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -14,17 +15,15 @@ export default function Document() {
         <meta property="og:title" content="RemédioJá"></meta>
         <meta property="og:description" content="O aplicativo que te ajuda a economizar com os médicamentos" />
         <meta property="og:url" content="https://front-end-preco-medicamentos.vercel.app/"></meta>
-        <title>RemédioJá</title>
         <link
           href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
           rel="stylesheet"
         />
       </Head>
-
       <body className="antialiased">
         <Main />
         <NextScript />
-        <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+        <Script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js" async />
       </body>
     </Html>
   );
