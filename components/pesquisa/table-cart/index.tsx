@@ -2,13 +2,6 @@ import {
   Message,
   ReturnRequestDataMedicineStore,
 } from "@/types/components/pesquisa";
-import {
-  Key,
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-} from "react";
 
 export default function TableCartComponent({
   server,
