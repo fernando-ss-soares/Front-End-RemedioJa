@@ -1,10 +1,11 @@
 import { useFormStatus } from "react-dom";
 import { useRouter } from "next/router";
-import Link from 'next/link'
+import Link from "next/link";
 
 import { SearchMedicine } from "@/actions";
 import { ParametersHeaderComponent } from "@/types/components/header";
 import BannerComponent from "../banner";
+import Image from "next/image";
 
 export default function HeaderComponentV2({
   children,
@@ -19,7 +20,6 @@ export default function HeaderComponentV2({
     } else {
       router.push(`/naoencotradonenhumproduto`);
     }
-
   }
 
   function Submit() {
@@ -64,15 +64,17 @@ export default function HeaderComponentV2({
 
   return (
     <>
-      <nav className="bg-white antialiased">
-        <div className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
+      <main className="antialiased bg-white">
+        <nav className="max-w-screen-xl px-4 mx-auto 2xl:px-0 py-4">
           <div className="flex flex-col lg:flex-row items-center justify-center md:items-center md:justify-between">
             <div className="flex items-center space-x-8 m-5">
               <div className="shrink-0">
-                <Link href={'/'} className="flex">
-                    <img
+                <Link href={"/"} className="flex">
+                  <Image
                     className="block w-auto h-8 mx-1"
                     src="/drug.svg"
+                    width={100}
+                    height={100}
                     alt=""
                   />
                   <span className="self-center text-xl font-semibold whitespace-nowrap text-black">
@@ -117,10 +119,10 @@ export default function HeaderComponentV2({
               </form>
             </div>
           </div>
-        </div>
+        </nav>
         <BannerComponent />
         {children}
-      </nav>
+      </main>
     </>
   );
 }
