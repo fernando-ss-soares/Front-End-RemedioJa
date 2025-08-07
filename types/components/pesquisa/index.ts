@@ -3,7 +3,12 @@ interface ReturnRequestDataMedicineStore {
 }
 
 interface Server {
-  message: Message[];
+  message: LoteMedicine;
+  requestId: string;
+}
+
+interface LoteMedicine {
+  loteMedicine: Message[];
 }
 
 interface Message {
@@ -17,5 +22,6 @@ interface Message {
 }
 
 export type {
-    ReturnRequestDataMedicineStore
+    ReturnRequestDataMedicineStore,
+    Message
 }

@@ -1,7 +1,7 @@
 'use client';
 
-import CustomerLogoComponent from "@/components/customer-logos";
-import HeroComponent from "@/components/hero";
+import CustomerLogoComponent from "@/components/customer";
+import HeroComponent from "@/components/principal/hero";
 
 export default function Home() {
   return (

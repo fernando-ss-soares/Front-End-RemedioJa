@@ -2,14 +2,12 @@
 
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import router from "next/router";
 
-import { SearchLoteMedicine } from "@/actions";
 import { ReturnRequestDataMedicineStore } from "@/types/components/pesquisa";
 
-import CartComponent from "@/components/cart";
-import TableCartComponent from "@/components/table-cart";
-import Loading from "./loading";
+import CartComponent from "@/components/pesquisa/cart";
+import TableCartComponent from "@/components/pesquisa/table-cart";
+import { ReceiveMedicineStore } from "@/functions/pesquisa";
 
 export default function Pesquisa() {
   const [Medicine, setMedicine] = useState<ReturnRequestDataMedicineStore>();
@@ -19,24 +17,14 @@ export default function Pesquisa() {
   useEffect(() => {
     if (!lote || lote == null) return;
 
-    async function ReceiveMedicineStore({ lote }: { lote: string }) {
-      const { data, status } = await SearchLoteMedicine({ lote: lote });
-
-      if (status === 200) {
-        setMedicine(data);
-      } else {
-        router.push("/naoencotradonenhumproduto");
-      }
-    }
-
-    ReceiveMedicineStore({ lote: lote });
+    ReceiveMedicineStore({ lote, setMedicine });
   }, [lote]);
 
   return (
     <>
-      <Suspense fallback={<Loading />}>
-        <CartComponent Medicine={Medicine} />
-        <TableCartComponent Medicine={Medicine} />
+      <Suspense fallback={<div className="text-white">Carregando...</div>}>
+          {Medicine?.server && <CartComponent server={Medicine.server} />}
+          {Medicine?.server && <TableCartComponent server={Medicine.server} />}  
       </Suspense>
     </>
   );

@@ -1,4 +1,4 @@
-import StatusHttpPage from "@/components/status-http";
+import StatusHttpPage from "@/components/geral/status-http";
 
 export default function Custom404() {
   return (
